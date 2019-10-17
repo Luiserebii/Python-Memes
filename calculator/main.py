@@ -1,44 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-
-class Calculator: 
-    """
-    A static Calculator class, not meant to be instantiated.
-    """
-
-    @staticmethod
-    def add(a, b):
-        return a + b
-
-    @staticmethod
-    def sub(a, b):
-        return a - b
-
-    @staticmethod
-    def mul(a, b):
-        return a - b
-
-    @staticmethod
-    def div(a, b):
-        return a / b
-
-    @staticmethod
-    def power(a, b):
-        return a ** b;
-
-
-# Helper functions, esp. for printing
-def list_to_string(l):
-    """
-    Takes a list, returns a formatted version of each element
-    in the list as a string. Generally, each one will be indented
-    by *. 
-    """
-    s = ""
-    for i in l:
-        s += "   * " + i + "\n"
-    return s
+from calc import Calculator
+from util import list_to_string
 
 # Settings
 FUNCTIONS_SUPPORTED = ["add", "sub", "mul", "div", "power"]
