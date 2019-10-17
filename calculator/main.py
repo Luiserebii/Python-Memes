@@ -39,9 +39,18 @@ FUNCTIONS_SUPPORTED = ["add", "sub", "mul", "div", "power"]
 def main(): 
     print("Hello! Welcome~")
     print("Please enter the kind of function you would like to use.")
-    print("Currently supported functions are: " + list_to_string(FUNCTIONS_SUPPORTED))
+    print("Currently supported functions are: \n" + list_to_string(FUNCTIONS_SUPPORTED))
     
-    if()
+    sel = input("Select an option: ")
+    if(sel == "add"):
+        print("Specify two numbers, a and b")
+        a = input("a: ")
+        b = input("b: ")
+        # Cast numbers to float via function, then add
+        res = Calculator.add(float(a), float(b))
+        print("Result: " + str(res))
+    else: 
+        print("Function \"" + sel + "\" not implemented.")
 
 # Execute our program
 main()
